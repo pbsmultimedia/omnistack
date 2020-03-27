@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f0f0f5;    
+}
+
+h1 {
+    color: #e02041;
+    font-style: italic;
+    font-size: 21px;
+
+    &::first-letter {
+        color: #41414D;
+        font-size: 24px;
+    }
+}
+
+input,
+button,
+textarea {
+    font-size: 18px; /* use REM for responsiveness..? */
+    &::placeholder {
+        color: #ccc;
+    }
+}
+
+/* should be a component..? */
+button {
+    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    height: 60px;
+    background: #e02041;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    //margin-top: 16px;    
+    text-decoration: none;    
+    transition: filter 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+        margin-left: 5px;
+    }
+
+    &:hover {
+        filter: brightness(90%); /* browser compability? */
+    }
+}
+
+input,
+textarea {
+    width: 100%;
+    //height: 60px;
+    color: #333;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    height: 60px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}

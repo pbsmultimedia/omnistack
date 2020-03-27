@@ -1,0 +1,42 @@
+.login-container {
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    .form-section {        
+        width: 100%;
+        max-width: 350px;                    
+
+        input {
+            margin-bottom: 10px;
+        }
+    }
+                
+    h1 {        
+        margin-bottom: 10px;
+        margin-top: 32px;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        color: #999;
+        text-decoration: none;        
+        transition: opacity 1s;
+
+        &:hover {
+            opacity: .75;            
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+    }
+
+
+}

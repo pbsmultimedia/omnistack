@@ -12,11 +12,11 @@ const app = express();
 // accept POST request as JSON
 app.use(express.json());
 
-// use the routes
-app.use(routes);
-
 // CORS
 app.use(cors());
+
+// use the routes
+app.use(routes);
 
 /**
  * Route to a resource
