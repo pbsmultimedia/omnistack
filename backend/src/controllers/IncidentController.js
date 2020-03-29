@@ -14,8 +14,8 @@ module.exports = {
         const {page = 1} = request.query; // pagination
         const incidents = await connection('incidents')
         .join('ongs', 'ongs.id', 'incidents.ong_id')// where is the M in MVC..?
-        .limit(5)
-        .offset((page - 1) * 5)
+        .limit(2)
+        .offset((page - 1) * 2)
         .select([
             'incidents.*',
             'ongs.name',

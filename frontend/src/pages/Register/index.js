@@ -6,8 +6,8 @@ import { FiArrowLeft, FiUserPlus } from 'react-icons/fi';
 import api from '../../services/api';
 
 // this could be a pure component?
-export default function Register () {
-
+export default function Register (props) {
+    console.log(props);
     // const [value, function] = = useState(initial value);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -42,6 +42,7 @@ export default function Register () {
             <div className="content">
                 <section>
                     <Logo />
+                    logo: {props.Logo}
                     <h1>Register</h1>
                     <p>
                         Help others and Be the Hero!    
@@ -56,6 +57,7 @@ export default function Register () {
                         placeholder="ONG"
                         value={name}
                         onChange={e=>{setName(e.target.value)}}
+                        required
                     />
                     <input 
                         placeholder="email" 

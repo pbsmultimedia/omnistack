@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
-import {FiPower, FiTrash} from 'react-icons/fi';
+import {FiPower, FiTrash, FiAlertCircle} from 'react-icons/fi';
 import './profile.scss';
 import api from '../../services/api';
 
@@ -68,34 +68,34 @@ export default function Profile () {
 
             <h1>Incidents</h1>
 
-            {/* should be a component? */}
-            <ul>
+            {/* should be a component? like incident card */}
+            <ul className="incidents-list">
                 {incidents.map(incident =>(
                     <li key={incident.id}>
-                    <strong>
-                        incident
-                    </strong>
-                    <p>
-                        {incident.title}
-                    </p>
-                    <strong>
-                        description
-                    </strong>
-                    <p>
-                        {incident.description}
-                    </p>
-                    <strong>
-                        value
-                    </strong>
-                    <p>
-                        {/* native stuff! */}
-                        {Intl.NumberFormat('en-EN', {style: 'currency', currency: 'EUR'}).format(incident.value)}
-                    </p>
+                        <h2>
+                            <FiAlertCircle /> incident <span>#{incident.id}</span>
+                        </h2>
+                        <p>
+                            {incident.title}
+                        </p>
+                        <strong>
+                            description
+                        </strong>
+                        <p>
+                            {incident.description}
+                        </p>
+                        <strong>
+                            value
+                        </strong>
+                        <p>
+                            {/* native stuff! */}
+                            {Intl.NumberFormat('en-EN', {style: 'currency', currency: 'EUR'}).format(incident.value)}
+                        </p>
 
-                    <button className="btn-delete" onClick={()=>handleDelete(incident.id)}>
-                        <FiTrash />
-                    </button>
-                </li>                    
+                        <button className="btn-delete" onClick={()=>handleDelete(incident.id)}>
+                            <FiTrash />
+                        </button>
+                    </li>
                 ))}                
             </ul>
 

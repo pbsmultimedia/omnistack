@@ -45,6 +45,16 @@
             border-radius: 8px;
             position: relative;
 
+            h2 {
+                font-size: 18px;
+                font-style: italic;
+                text-transform: capitalize;
+
+                span {
+                    color: #e02041;
+                }
+            }
+
             .btn-delete {
                 position: absolute;
                 right: 24px;
