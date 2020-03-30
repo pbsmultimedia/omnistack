@@ -1,6 +1,5 @@
 const connection = require('../database/connection');
-// to create the encrypted id of the ONG
-const crypto = require('crypto');
+const generateUniqueId = require('../utilities/generateUniqueId');
 
 module.exports = {
 
@@ -11,7 +10,8 @@ module.exports = {
 
     async create (request, response) {        
 
-        const id = crypto.randomBytes(4).toString('HEX');
+        //const id = crypto.randomBytes(4).toString('HEX');
+        const id = generateUniqueId();
 
         //const {id} = request.params; // via GET query string
         //const data = request.body; // via POST

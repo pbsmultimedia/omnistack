@@ -31,7 +31,7 @@ module.exports = {
         //const {id} = request.params; // via GET query string
         //const data = request.body; // via POST
         const {title, description, value} = request.body;
-        const ong_id = request.headers.authorization;
+        const ong_id = request.headers.authorization; // should check if it exists..
 
         // make the insert and wait for it
         // get the id of the first item of the result array

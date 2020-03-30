@@ -37,4 +37,5 @@ app.use(errors());
  * 
  */
 
-app.listen(3333);
+//app.listen(3333); // to run tests export the app instead
+module.exports = app;
