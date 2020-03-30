@@ -4,6 +4,7 @@
  * 
  */
 const express = require('express');
+const { errors } = require('celebrate');
 const routes = require('./routes');
 const cors = require('cors');
 
@@ -17,6 +18,8 @@ app.use(cors());
 
 // use the routes
 app.use(routes);
+
+app.use(errors());
 
 /**
  * Route to a resource

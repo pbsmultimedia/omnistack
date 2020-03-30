@@ -65,7 +65,7 @@ module.exports = {
 
         await connection('incidents').where('id', id).delete();
 
-        return response.status(204).send(); // 204: success without content
+        return response.status(204).send(); // 204: success without content - does not work ok on IE11 and some smart TV´s
 
     }
 }
