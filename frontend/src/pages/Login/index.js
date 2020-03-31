@@ -29,15 +29,20 @@ export default function Login () {
     return (
         <div className="login-container">
             <section className="form-section">
-                <Logo />                
+                <Logo />                         
                 <form>
+                    <p className="description">
+                        Be the hero is a platform that connects ONG´s that need help and who wants to help. 
+                        <br />
+                        Use the id e2b543b9 to test the platform
+                    </p>
                     <h1>Login</h1>
                     <input 
                         placeholder="your ONG id"
                         value={id}
                         onChange={e=>setId(e.target.value)}
                     />
-                    <button type="submit" className="btn" onClick={handleLogin}>
+                    <button type="submit" className="btn btn-full-width" onClick={handleLogin}>
                         GO <FiLogIn color="#fff" className="icon" />
                     </button>
                     {/* use Link..? */}
@@ -47,7 +52,7 @@ export default function Login () {
                     </Link>
                 </form>
             </section>    
-            <img src={heroes} alt="Be the Hero" />
+            <img src={heroes} alt="Be the Hero" className="heroes-img" />
         </div>
     )    
 }

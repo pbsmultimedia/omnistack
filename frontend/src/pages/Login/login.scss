@@ -2,23 +2,35 @@
     width: 100%;
     max-width: 1120px;
     height: 100vh;
-    display: flex;    
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
+    display: grid;        
+    align-items: center;    
+    margin: 0 auto;    
+    padding: 15px;
 
-    .form-section {        
-        width: 100%;
-        max-width: 350px;                    
+    @media (min-width: 769px){
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 100px;
+    }
+
+    @media (max-width: 768px){
+        grid-template-columns: 1fr;
+    }
+
+    .form-section {                
 
         input {
             margin-bottom: 10px;
         }
     }
-                
+              
+    .description {
+        color: #999;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
     h1 {        
-        margin-bottom: 10px;
-        margin-top: 32px;
+        margin: 10px auto;        
     }
 
     a {
@@ -38,5 +50,8 @@
         }
     }
 
+    .heroes-img {
+        width: 100%;
+    }
 
 }

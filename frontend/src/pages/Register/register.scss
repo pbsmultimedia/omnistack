@@ -8,13 +8,23 @@
     margin: 0 auto;
 
     .content {
-        width: 100%;
-        padding: 96px;
+        width: 100%;        
         background: #f0f0f5;
         box-shadow: 0 0 100px rgba(0, 0, 0 ,.1);
-        display: flex;
+        display: grid;
         justify-content: space-between;
         align-items: center;
+
+        @media (min-width: 769px){
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 100px;
+            padding: 100px;
+        }
+    
+        @media (max-width: 768px){
+            grid-template-columns: 1fr;
+            padding: 15px;
+        }
     }
 
     section {
@@ -30,19 +40,7 @@
             color: #737380;
             line-height: 32px;
         }
-
-        // should be a component..
-        .link-back {
-            text-decoration: none;
-            color: #999;
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-
-            .icon-back {
-                margin-right: 10px;
-            }
-        }
+        
     }
 
     form {
@@ -51,6 +49,19 @@
         
         .icon-register {
             margin-left: 10px;
+        }
+    }
+
+    // should be a component..
+    .link-back {
+        text-decoration: none;
+        color: #999;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        .icon-back {
+            margin-right: 10px;
         }
     }
 }

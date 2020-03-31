@@ -42,10 +42,6 @@ export default function NewIncident () {
                     <Logo />
                     <h1>New Incident</h1>
                     <p>Give us all the details about the incident</p>
-                    <Link to="/profile" className="link-back">
-                        <FiArrowLeft class="icon-back" />
-                        back
-                    </Link>
                 </section>
                 <form>
                     <input 
@@ -66,6 +62,10 @@ export default function NewIncident () {
                     <button className="btn" onClick={handleNewIncident}>
                         register
                     </button>
+                    <Link to="/profile" className="link-back">
+                        <FiArrowLeft class="icon-back" />
+                        back
+                    </Link>
                 </form>
             </div>
         </div>        

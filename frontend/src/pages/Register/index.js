@@ -45,10 +45,6 @@ export default function Register (props) {
                     <p>
                         Help others and Be the Hero!    
                     </p>
-                    <Link to="/" className="link-back">
-                        <FiArrowLeft className="icon icon-back" />
-                        back
-                    </Link>
                 </section>
                 <form onSubmit={handleRegister}>
                     <input 
@@ -76,9 +72,15 @@ export default function Register (props) {
                         required
                     />
 
-                    <button className="btn">
+                    <button className="btn btn-full-width">
                         Register <FiUserPlus color="#fff" className="icon icon-register" />
                     </button>
+
+                    <Link to="/" className="link-back">
+                        <FiArrowLeft className="icon icon-back" />
+                        back
+                    </Link>
+
                 </form>
             </div>
         </div>

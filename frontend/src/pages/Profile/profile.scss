@@ -1,43 +1,79 @@
 .profile-container {
     width: 100%;
     max-width: 1180px;    
-    padding: 0 30px;
+    padding: 0 15px;
     margin: 0 auto;
 
     header {
-        display: flex;
+        display: grid;        
+        
+        @media (min-width: 769px){
+            grid-template-columns: 1fr 2fr 2fr;
+            //grid-gap: 100px;
+            //padding: 100px;
+        }
+    
+        @media (max-width: 768px){
+            grid-template-columns: 1fr;
+            //padding: 15px;
+            grid-gap: 15px;            
+        }
+
         align-items: center;
         margin-top: 50px;
+        justify-content: flex-end;
 
         span {
             font-size: 20px;
-            margin-left: 24px;
+            //margin-left: 24px;
         }
 
-        .btn-new-incident {
-            width: 260px;
-            margin-left: auto;
-        }
+        .btn-group {            
 
-        .btn-logout {
-            height: 60px;
-            width: 60px;
-            border-radius: 8px;
-            border: 1px solid #dcdce6;
-            margin-left: 16px;
-            color: #e02041; // should be a variable
-        }
+            @media (min-width: 769px){
+                display: flex;
+                justify-content: flex-end;                
+            }
+        
+            @media (max-width: 768px){                
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+            }
+
+            .btn-new-incident {
+                //width: 260px;
+                //margin-left: auto;
+            }
+    
+            .btn-logout {
+                height: 60px;
+                width: 60px;
+                border-radius: 8px;
+                border: 1px solid #dcdce6;
+                margin-left: 16px;
+                color: #e02041; // should be a variable
+            }
+        }        
     }
 
     h1 {
-        margin: 80px auto 24px;
+        margin: 25px auto;
     }
 
     ul {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 24px;
+        //grid-template-columns: 1fr 1fr;        
         list-style: none;
+
+        @media (min-width: 769px){
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 25px;
+        }
+    
+        @media (max-width: 768px){
+            grid-template-columns: 1fr;
+            grid-gap: 25px;
+        }
 
         li {
             background: #fff;

@@ -58,12 +58,14 @@ export default function Profile () {
                 <span>
                     Welcome {localStorage.getItem('ong_name')}
                 </span>
-                <Link to="/incidents/new" className="btn btn-new-incident">
-                    New incident
-                </Link>
-                <button className="btn-logout" onClick={handleLogout}>
-                    <FiPower />
-                </button>
+                <div className="btn-group">
+                    <Link to="/incidents/new" className="btn btn-new-incident">
+                        New incident
+                    </Link>
+                    <button className="btn-logout" onClick={handleLogout}>
+                        <FiPower />
+                    </button>
+                </div>
             </header>
 
             <h1>Incidents</h1>

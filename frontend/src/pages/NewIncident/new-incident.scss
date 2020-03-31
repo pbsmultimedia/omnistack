@@ -12,9 +12,22 @@
         padding: 96px;
         background: #f0f0f5;
         box-shadow: 0 0 100px rgba(0, 0, 0 ,.1);
-        display: flex;
+        display: grid;
+        //grid-template-columns: 1fr 1fr;
+        //grid-gap: 100px;
         justify-content: space-between;
         align-items: center;
+        
+        @media (min-width: 769px){
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 100px;
+            padding: 100px;
+        }
+    
+        @media (max-width: 768px){
+            grid-template-columns: 1fr;
+            padding: 15px;
+        }
     }
 
     section {
